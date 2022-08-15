@@ -1,0 +1,12 @@
+body{
+    background-color: white;
+}
+.doc{
+    border: 1px solid red;
+    padding: 30px;
+}
+
+.doc h1{
+    text-align: center;
+    font-size: 25px;
+}

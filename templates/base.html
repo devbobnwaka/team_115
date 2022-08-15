@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FILMS</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    {% block css %}
+    
+    {% endblock css %}
+    {% comment %} <link rel="stylesheet" href="{% static 'css/custom_css.css' %}"> {% endcomment %}
+</head>
+<body>
+    {% comment %} <ul class="messages msg" >
+        
+        <li class="{{ message.tags }}"> message </li>
+        
+    </ul> {% endcomment %}
+    {% if messages %}
+        <ul class="messages msg">
+            {% for message in messages %}
+            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    {% block content  %}
+
+
+    {% endblock content %}
+</body>
+</html>
